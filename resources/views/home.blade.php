@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-                    <a href="{{ route('create') }}">create</a>  
+                    <a href="{{ route('create') }}">create</a>
                 </div>
             </div>
         </div>

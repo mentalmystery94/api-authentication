@@ -70,10 +70,10 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">Inloggen</a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">Registeren</a>
                         @endif
                     @endauth
                 </div>
@@ -85,8 +85,8 @@
   <hr class="my-4">
   <p>kijk gerust rond</p>
   <p class="lead">
-    <a class="btn btn-primary btn-lg" href="{{ route('login') }}" role="button">Login</a>
-    <a class="btn btn-primary btn-lg" href="{{ route('register') }}" role="button">Register</a>
+    <a class="btn btn-primary btn-lg" href="{{ route('login') }}" role="button">Inloggen</a>
+    <a class="btn btn-primary btn-lg" href="{{ route('register') }}" role="button">Registeren</a>
     
   </p>
 </div>

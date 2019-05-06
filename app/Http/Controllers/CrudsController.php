@@ -33,6 +33,8 @@ class CrudsController extends Controller
         return view('create');
     }
 
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -44,7 +46,8 @@ class CrudsController extends Controller
         $request->validate([
             'first_name'    =>  'required',
             'last_name'     =>  'required',
-            'image'         =>  'required|image|max:2048'
+            'image'         =>  'required|image|max:2048',
+            
         ]);
 
         $image = $request->file('image');
@@ -52,7 +55,7 @@ class CrudsController extends Controller
         $new_name = rand() . '.' . $image->getClientOriginalExtension();
         $image->move(public_path('images'), $new_name);
         $form_data = array(
-            'id'               =>   $request->id,
+
             'first_name'       =>   $request->first_name,
             'last_name'        =>   $request->last_name,
             'image'            =>   $new_name
@@ -105,25 +108,27 @@ class CrudsController extends Controller
             $request->validate([
                 'first_name'    =>  'required',
                 'last_name'     =>  'required',
-                'image'         =>  'image|max:2048'
+                'image'         =>  'required|image|max:2048'
             ]);
 
             $image_name = rand() . '.' . $image->getClientOriginalExtension();
-            $image->move(public_path('images'), $image_name);
+            $image->move(public_path('image'), $image_name);
         }
         else
         {
             $request->validate([
                 'first_name'    =>  'required',
-                'last_name'     =>  'required'
+                'last_name'     =>  'required',
+                'image'         =>  'required|image|max:2048',
+
             ]);
         }
 
         $form_data = array(
-            'id'               =>   $request->id,
             'first_name'       =>   $request->first_name,
             'last_name'        =>   $request->last_name,
-            'image'            =>   $image_name
+            'image'            =>   $image_name,
+
         );
   
         Crud::whereId($id)->update($form_data);
@@ -148,4 +153,4 @@ class CrudsController extends Controller
     }
 }
 
-  // this function delete data and 
+  // this function delete data

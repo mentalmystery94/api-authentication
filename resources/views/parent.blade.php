@@ -7,12 +7,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />   
-    <title>new Employer</title>
+    <title>nieuwe medewerker</title>
     </head>     
 <body>
   <div class="container">    
      <br />
-     <h3 align="center">create a new Employer</h3>
+     <h3 align="center">Een nieuwe medewerker aanmaken</h3>
      <br />
      @yield('content')
     </div>

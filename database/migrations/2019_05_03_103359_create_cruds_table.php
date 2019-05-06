@@ -18,6 +18,8 @@ class CreateCrudsTable extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('image');
+            $table->enum('function', array('Programmeur','Sales','Ceo', 'Manager'));
+            $table->enum('contract', array('0 uren','1 jaar','2 tot 3 jaar', 'vast'));
             $table->timestamps();
             $table->engine = 'InnoDB';
         });

@@ -22,8 +22,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-
-Route::get('/create', 'CrudsController@create')->name('create');
+Route::get('/create','CrudsController@create')->name('create');
 
 
 

@@ -16,7 +16,7 @@ class Crud extends Model
 // this connect the foreign key to another table  
     
     protected $fillable = [
-    'id', 'first_name', 'last_name', 'image'
+    'id', 'first_name', 'last_name', 'image', 'function', 'contract'
     ];
 }
 
